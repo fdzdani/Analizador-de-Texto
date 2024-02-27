@@ -8,7 +8,7 @@ Este proyecto tiene el objetivo de automatizar el analisis de documentos procesa
 
 ### Descripcion:
 
-Vamos a crear una nube de palabras para visualizaar la informacion abstracta del documento 
+Creamos una nube de palabras para visualizaar la informacion abstracta del documento 
 
 ### Justificacion: 
 
@@ -64,3 +64,18 @@ Para el procesado de los datos abstractos obtenidos utilizaremos wordcloud para 
 
 ### Verificacion:
 La verificacion de los resultados mostrados por el script se ha hecho de forma manual, puesto que el script muestra una nube de palabras clave se puede comprobar que esta nube es proporcionada por la informacion en los datos abstractos de forma manual
+
+## Visualizacion del numero de figuras por articulo
+
+### Descripcion:
+Creamos una visualizacion que nos muestre el numero de figuras contenido en cada articulo
+
+### Justificacion: 
+
+#### Para esta tarea vamos a utilizar distintas herramientas entre las que se encuentran: 
+
+* Biblioteca matplotlib.pyplot como plt para mostrar dicha nube de palabras generada con wordcloud 
+
+* Biblioteca os que permite ejecutar mandatos del sistema operativo dentro de Python 
+
+* Biblioteca xml.etree.cElementTree como ET que nos permite trabajar con documentos XML en Python 

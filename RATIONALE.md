@@ -1,27 +1,27 @@
-brave-instrumentation rationale
-Rationale here applies to common decisions made in this directory. See Brave's RATIONALE for internal rationale.
+Rationale Proyecto de Analisis de Articulos 
 
-Why does the client response callback run in the invocation context?
-This rationale applies equally to CLIENT and PRODUCER spans.
+Introduccion 
 
-Asynchronous code is often modeled in terms of callbacks. For example, the following pseudo code represents a chain of 3 client calls.
+Este proyecto tiene el objetivo de automatizar el analisis de documentos procesados con Grobid. 
 
-// Assume you are reactive: assembling a call doesn't invoke it.
-```Python
-call = client.call("1")
-             .flatMap((r) -> client.call("2"))
-             .flatMap((r) -> client.call("3"));
+Generacion de una Nube de palabras 
 
-ScopedSpan parent = tracer.startScopedSpan("parent");
-try {
-  // In reactive style, subscribe attaches the trace context
-  call.subscribe(subscriber);
-} finally {
-  parent.finish();
-}
-```
-It might be surprising that calls "2" and "3" execute in the "parent" trace context, as opposed to the preceding client call. Put another way, response callbacks run in the invocation context, which cause new spans to appear as as a siblings, as opposed to children of the previous callback (in this case a client).
+Descripcion 
 
-This may sound unintuitive to those thinking in terms of callback nesting depth, but having a consistent structure allows traces to appear similar regardless of imperative vs async invocation. It also is more easy to reason with, but we'll touch on that later.
+Vamos a crear una nube de palabras para visualizaar la informacion abstracta del documento 
 
-Let's consider the above async pseudo code with the logical equivalent in synchronous code. In each case, there are 3 client calls made in sequence. In each case, there's a potential data dependency, but it isn't actually used!
+Justificacion: 
+
+Para esta tarea vamos a utilizar distintas herramientas entre las que se encuentran: 
+
+Biblioteca wordcloud para generar la nube de palabras 
+
+Biblioteca matplotlib.pyplot para mostrar dicha nube de palabras generada con wordcloud 
+
+Biblioteca os que permite ejecutar mandatos del sistema operativo dentro de Python 
+
+Biblioteca xml.etree.cElementTree que nos permite trabajar con documentos XML en Python 
+
+Verificación de los datos: 
+
+Para verificar los datos de entrada que hemos obtenido del directorio ... fueran documentos xml hemos hecho dos comprobaciones la primera es que el path que hemos obtenido que fuera un file y la segunda que termine en .xml () 

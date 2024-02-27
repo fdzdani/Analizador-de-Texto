@@ -46,5 +46,21 @@ with open(path, 'r') as file:
                 abstract_info = p.text
 ```
 Para obtener los datos abstractos necesarios para generar la nube de palabras, para ello hemos usados las funciones find de ET para encontrar las etiquetas que buscamos y para navegar dentro de esas etiquetas. Una vez obtenidos los datos que buscamos comprobamos que estos sean en formato de texto para poder crear el wordcloud
-### Procesado de los datos:
 
+### Procesado de los datos:
+````python
+wordcloud = WordCloud(width = 800, height = 800, background_color = 'white', 
+                      stopwords = None, min_font_size = 10).generate(abstract_info)
+        plt.figure(figsize = (8, 8), facecolor = None)
+        plt.imshow(wordcloud)
+        plt.axis("off")
+        plt.tight_layout(pad = 0)
+    
+        plt.title(xml)
+
+        plt.show()
+````
+Para el procesado de los datos abstractos obtenidos utilizaremos wordcloud para generar la nube de palabras y plt para mostrar los resultados de wordcloud
+
+### Verificacion:
+La verificacion de los resultados mostrados por el script se ha hecho de forma manual, puesto que el script muestra una nube de palabras clave se puede comprobar que esta nube es proporcionada por la informacion en los datos abstractos de forma manual

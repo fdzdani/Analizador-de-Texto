@@ -30,7 +30,7 @@ for xml in os.listdir(xmlfiles):
     path = os.path.join(xmlfiles, xml)
     if os.path.isfile(path) and path.endswith(".xml"):
 ```
-Para verificar los datos de entrada que hemos obtenido del directorio salida, establecido en el pipeline entre python y grobid, fueran documentos XML hemos hecho dos comprobaciones la primera es que el path que hemos obtenido sea un file y la segunda que termine en .xml 
+Para verificar los datos de entrada que hemos obtenido del directorio salida, establecido en el pipeline entre python y grobid, fueran documentos XML hemos hecho dos comprobaciones la primera es que el path que hemos obtenido sea un file y la segunda que termine en .xml
 
 ### Obtencion de los datos:
 ```python
@@ -42,8 +42,9 @@ with open(path, 'r') as file:
         for abstract in abstracts:
             div = abstract.find('tei:div', namespaces)
             p = div.find('tei:p', namespaces)
-            abstract_info = p.text
+            if isinstance(p.text, str):
+                abstract_info = p.text
 ```
-Para obtener los datos abstractos necesarios para generar la nube de palabras, para ello hemos usados las funciones find de ET para encontrar las etiquetas que buscamos y para navegar dentro de esas etiquetas
+Para obtener los datos abstractos necesarios para generar la nube de palabras, para ello hemos usados las funciones find de ET para encontrar las etiquetas que buscamos y para navegar dentro de esas etiquetas. Una vez obtenidos los datos que buscamos comprobamos que estos sean en formato de texto para poder crear el wordcloud
 ### Procesado de los datos:
 

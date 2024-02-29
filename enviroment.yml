@@ -1,0 +1,4 @@
+name: analisis_articulos
+channels:
+  - defaults
+prefix: /home/daniel/anaconda3/envs/analisis_articulos

@@ -18,4 +18,22 @@ y activarlo:
 ````
 source nombre_entorno/bin/activate
 ````
-Una vez tengamos el entorno activado debemos descargar los modulos necesarios para correr nuestro programa, para ello utilizaremos el archivo ````modulos.txt```` proporcionado en el repositorio que contiene todas
+Una vez tengamos el entorno activado debemos descargar los modulos necesarios para correr nuestro programa, para ello utilizaremos el archivo [modulos.txt](https://github.com/fdzdani/Extraccion-de-Texto/blob/Develop/modulos.txt) proporcionado en el repositorio para descargar todas las librerias necesarias utilizando:
+````
+pip install -r modulos.txt
+````
+### Conda
+Para utilizar conda para crear el entorno virtual primero debemos [descargar anaconda](https://www.hostinger.es/tutoriales/instalar-anaconda-python-en-ubuntu). Una vez descargado debemos crearemos el entorno con todas las librerias necesarias a partir del archivo [enviroment.yml](https://github.com/fdzdani/Extraccion-de-Texto/blob/Develop/enviroment.yml) con:
+```` 
+conda env create -f environment.yml
+````
+y activarlo:
+````
+conda activate nombre_entorno
+````
+Una vez instalado todo pasaremos a la ejecucion.
+## Instrucciones de ejecucion
+Para la ejecucion del programa simplemente debemos introducir los articulos que queremos procesar en la carpeta de entrada, tambien tenemos que activar el servidor de grobid, y por ultimo activar el entorno virtual si no lo tenemos activado ya. Una vez hecho todo lo anterior corremos el script principal mediante el comando:
+````
+python3 main.py
+````

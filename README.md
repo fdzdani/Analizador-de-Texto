@@ -37,3 +37,4 @@ Para la ejecucion del programa simplemente debemos introducir los articulos que 
 ````
 python3 main.py
 ````
+Que se ocupara de correr todos los otros scripts.

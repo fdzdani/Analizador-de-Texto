@@ -71,7 +71,7 @@ Nos encontraremos con los siguientes documentos generados en el subdirectorio co
 ![image](https://github.com/fdzdani/Extraccion-de-Texto/assets/115399394/3fa70aa4-30e6-4ff0-835b-363fe2c87fb9)
 
 ### Resultados de ejecucion
-Wordcloud:
+WordCloud:
 
 ![image](https://github.com/fdzdani/Extraccion-de-Texto/assets/115399394/24fc0404-a6f3-4ca2-981d-c7852b1f5196)
 
@@ -83,7 +83,22 @@ ListLinks:
 
 ![image](https://github.com/fdzdani/Extraccion-de-Texto/assets/115399394/4cda5699-32ef-48da-a066-5cdbf3a8e956)
 
+## Como citar
+Si se quiere citar este repositorio, puedes hacerlo por ejemplo con BibTeX:
 
+```bibtex
+@misc{
+    author = {Daniel Fernandez Gomez},
+    year = {2024},
+    title = {Extractor_de_Texto},
+    publisher = {GitHub},
+    url = {https://github.com/fdzdani/Extraccion-de-Texto}
+}
+```
+## Donde buscar ayuda
+Para cualquier problema con la descarga, instalacion o puesta en marcha de grobid, acudir a la pagina principal de [documentacion de grobid](https://grobid.readthedocs.io/en/latest/Introduction/) o a su [repositorio de GitHub](https://github.com/kermitt2/grobid). Para cualquier problema con el cliente de python de grobid acudir a su [repositorio de GitHub](https://github.com/kermitt2/grobid_client_python).
 
 ## Licencia
 Distribuido bajo [MIT License](https://github.com/fdzdani/Extraccion-de-Texto/blob/Develop/LICENSE). Ver LICENSE.txt para mas informacion.
+
+Autor principal y contacto: Daniel Fernandez Gomez (d.fgomez@alumnos.upm.es)

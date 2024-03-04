@@ -53,3 +53,37 @@ Una posible solucion para este problema es instalar el siguiente plugin en Ubunt
 ````bash
 sudo apt install qtwayland5
 ````
+## Ejemplos de ejecucion
+Primero ponemos el servidor de grobid en marcha:
+
+![image](https://github.com/fdzdani/Extraccion-de-Texto/assets/115399394/8835f016-72dd-4062-bc50-53d95cd04546)
+
+Tras esto activamos el entorno para empezar a trabajar:
+
+![image](https://github.com/fdzdani/Extraccion-de-Texto/assets/115399394/9476f9d0-6943-4459-a608-be837c30f43c)
+
+A continuacion llamamos al script principal, el cual sirve de pipeline con grobid y llama a los demas scripts, y nos indica si esta funcionando el servidor de grobid:
+
+![image](https://github.com/fdzdani/Extraccion-de-Texto/assets/115399394/16cc959a-27dd-47cf-9513-3f26ac36895b)
+
+Nos encontraremos con los siguientes documentos generados en el subdirectorio correspondiente:
+
+![image](https://github.com/fdzdani/Extraccion-de-Texto/assets/115399394/3fa70aa4-30e6-4ff0-835b-363fe2c87fb9)
+
+### Resultados de ejecucion
+Wordcloud:
+
+![image](https://github.com/fdzdani/Extraccion-de-Texto/assets/115399394/24fc0404-a6f3-4ca2-981d-c7852b1f5196)
+
+ShowFigures:
+
+![image](https://github.com/fdzdani/Extraccion-de-Texto/assets/115399394/df2e2198-8a44-4c91-92c7-4aeedd67de3c)
+
+ListLinks:
+
+![image](https://github.com/fdzdani/Extraccion-de-Texto/assets/115399394/4cda5699-32ef-48da-a066-5cdbf3a8e956)
+
+
+
+## Licencia
+Distribuido bajo [MIT License](https://github.com/fdzdani/Extraccion-de-Texto/blob/Develop/LICENSE). Ver LICENSE.txt para mas informacion.

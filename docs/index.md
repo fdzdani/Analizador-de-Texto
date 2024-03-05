@@ -18,4 +18,4 @@ Para el uso de estas herramientas se recomienda el uso de Ubuntu Linux por su fa
 ## Licencia y contacto
 Distribuido bajo [MIT License](https://opensource.org/license/mit). Ver [LICENSE](https://github.com/fdzdani/Extraccion-de-Texto/blob/main/LICENSE) para mas informacion.
 
-Autor principal y contacto: Daniel Fernandez Gomez (d.fgomez@alumnos.upm.es)
+Autor y contacto: Daniel Fernandez Gomez (d.fgomez@alumnos.upm.es)

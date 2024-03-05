@@ -113,6 +113,6 @@ Si se quiere citar este repositorio, puedes hacerlo por ejemplo con BibTeX:
 Para cualquier problema con la descarga, instalacion o puesta en marcha de grobid, acudir a la pagina principal de [documentacion de grobid](https://grobid.readthedocs.io/en/latest/Introduction/) o a su [repositorio de GitHub](https://github.com/kermitt2/grobid). Para cualquier problema con el cliente de python de grobid acudir a su [repositorio de GitHub](https://github.com/kermitt2/grobid_client_python).
 
 ## Licencia
-Distribuido bajo [MIT License](https://opensource.org/license/mit). Ver [LICENSE](https://github.com/fdzdani/Extraccion-de-Texto/blob/Develop/LICENSE) para mas informacion.
+Distribuido bajo [MIT License](https://opensource.org/license/mit). Ver [LICENSE](https://github.com/fdzdani/Extraccion-de-Texto/blob/main/LICENSE) para mas informacion.
 
 Autor principal y contacto: Daniel Fernandez Gomez (d.fgomez@alumnos.upm.es)

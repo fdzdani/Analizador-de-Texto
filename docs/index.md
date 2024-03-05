@@ -6,11 +6,11 @@ Este proyecto hace uso de la herramienta grobid para procesar los distintos arti
 * Grobid
 * Python-client-grobid
   
-Para poder utilizar las herramientas proporcionadas en este repositorio se necesitara tener [instalado pyhton 3.10.12](), [instalar grobid](https://grobid.readthedocs.io/en/latest/Install-Grobid/) y tener corriendo un [servidor de grobid](https://grobid.readthedocs.io/en/latest/Grobid-service/), ademas tambien se deberia tener instalado el [cliente-python de grobid](https://github.com/kermitt2/grobid_client_python/blob/master/Readme.md) para poder hacer llamadas al servidor de grobid desde el script del pipeline
+Para poder utilizar las herramientas proporcionadas en este repositorio se necesitara tener [instalado pyhton 3.10.12](), [instalar grobid](https://grobid.readthedocs.io/en/latest/Install-Grobid/) y tener corriendo un [servidor de grobid](https://grobid.readthedocs.io/en/latest/Grobid-service/), ademas tambien se deberia tener instalado el [cliente-python de grobid](https://github.com/kermitt2/grobid_client_python/blob/master/Readme.md) para poder hacer llamadas al servidor de grobid desde el script del pipeline.
 ## Recomendaciones
 * Ubuntu 22.04
 
-Para el uso de estas herramientas se recomienda el uso de Ubuntu Linux por su facilida para la instalacion y puesta en marcha de todos los recursos proporcionados
+Para el uso de estas herramientas se recomienda el uso de Ubuntu Linux por su facilida para la instalacion y puesta en marcha de todos los recursos proporcionados.
 ## Contenido
 - [Instalacion](https://github.com/fdzdani/Extraccion-de-Texto/blob/Develop/docs/installation.md)
 - [Uso](https://github.com/fdzdani/Extraccion-de-Texto/blob/Develop/docs/usage.md)

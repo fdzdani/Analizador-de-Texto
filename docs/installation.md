@@ -1,4 +1,5 @@
 ## Instrucciones de instalacion
+### Instalacion mediante GitHub
 Para utilizar los recursos proporcionados en este repositorio se debe descargar el .zip con todo el contenido o realizar un ````git clone```` de este repositorio. 
 
 ````
@@ -6,6 +7,13 @@ git clone https://github.com/fdzdani/Extraccion-de-Texto.git
 ````
 
 Una vez obtengas el repositorio en tu maquina, solo debes crear un entorno virtual con los modulos necesarios para correr los scripts. Para esto tenemos dos opciones utilizar venv o conda.
+### Instalacion mediante Docker
+Se provee de una imagen de Docker ya instalada. Para ejecutar los recursos mediante Docker, podras usar el Dockerfile que se proporciona en este repositorio:
+
+```
+docker build -t analizador .
+```
+## Preparacion del entorno
 ### Entorno virtual con Venv
 Para utilizar venv para crear el entorno virtual primero debemos descargar esta herramienta con:
 ```` 

@@ -1,8 +1,8 @@
 import os
 import xml.etree.ElementTree as ET
 
-xmlfiles = "./Output/"
-output = "./Wordclouds/"
+xmlfiles = "./SalidaGrobid/"
+output = "./Salida/"
 
 links = {}
 

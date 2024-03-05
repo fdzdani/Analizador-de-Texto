@@ -12,9 +12,9 @@ Para poder utilizar las herramientas proporcionadas en este repositorio se neces
 
 Para el uso de estas herramientas se recomienda el uso de Ubuntu Linux por su facilida para la instalacion y puesta en marcha de todos los recursos proporcionados.
 ## Contenido
-- [Instalacion](https://github.com/fdzdani/Extraccion-de-Texto/blob/Develop/docs/installation.md)
-- [Uso](https://github.com/fdzdani/Extraccion-de-Texto/blob/Develop/docs/usage.md)
-- [Scripts](https://github.com/fdzdani/Extraccion-de-Texto/blob/Develop/docs/scripts.md)
+- [Instalacion](https://extraccion-de-texto.readthedocs.io/es/latest/installation/)
+- [Uso](https://extraccion-de-texto.readthedocs.io/es/latest/usage/)
+- [Scripts](https://extraccion-de-texto.readthedocs.io/es/latest/scripts/)
 ## Licencia y contacto
 Distribuido bajo MIT License. Ver LICENSE.txt para mas informacion.
 

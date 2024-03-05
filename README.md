@@ -1,5 +1,5 @@
 # Analisis de articulos
-## Descripcion
+## Descripcion  
 Este proyecto hace uso de la herramienta grobid para procesar los distintos articulos que se le proporcione mediante un script escrito en Python que hace de pipeline entre nuestro sistema y el servidor de grobid, una vez generados los documentos XML, existen otros 3 scripts para poder generar una nube de palabras o wordcloud mediante la informacion abstracta del XML, mostrar el numero de figuras en cada uno de los articulos procesados, y crear una lista de todos los links encontrados en cada articulo.
 ## Requisitos
 * Python 3.10.12
@@ -12,8 +12,14 @@ Para poder utilizar las herramientas proporcionadas en este repositorio se neces
 
 Para el uso de estas herramientas se recomienda el uso de Ubuntu Linux por su facilida para la instalacion y puesta en marcha de todos los recursos proporcionados.
 ## Instrucciones de instalacion
-Para utilizar los recursos proporcionados en este repositorio se debe descargar el .zip con todo el contenido o realizar un ````git clone```` de este repositorio. Una vez obtengas el repositorio en tu maquina, solo debes crear un entorno virtual con los modulos necesarios para correr los scripts. Para esto tenemos dos opciones:
-### Venv
+Para utilizar los recursos proporcionados en este repositorio se debe descargar el .zip con todo el contenido o realizar un ````git clone```` de este repositorio. 
+
+````
+git clone https://github.com/fdzdani/Extraccion-de-Texto.git
+````
+
+Una vez obtengas el repositorio en tu maquina, solo debes crear un entorno virtual con los modulos necesarios para correr los scripts. Para esto tenemos dos opciones utilizar venv o conda.
+### Entorno virtual con Venv
 Para utilizar venv para crear el entorno virtual primero debemos descargar esta herramienta con:
 ```` 
 python3 -m pip install --user virtualenv
@@ -30,7 +36,7 @@ Una vez tengamos el entorno activado debemos descargar los modulos necesarios pa
 ````
 pip install -r modulos.txt
 ````
-### Conda
+### Entorno virtual con Conda
 Para utilizar conda para crear el entorno virtual primero debemos [descargar anaconda](https://www.hostinger.es/tutoriales/instalar-anaconda-python-en-ubuntu). Una vez descargado debemos crearemos el entorno con todas las librerias necesarias a partir del archivo [enviroment.yml](https://github.com/fdzdani/Extraccion-de-Texto/blob/Develop/enviroment.yml) con:
 ```` 
 conda env create -f environment.yml
@@ -42,12 +48,12 @@ conda activate nombre_entorno
 Una vez instalado todo podemos hacer en ambos casos un ````pip freeze```` para comprobar que todo se ha instalado correctamente, y pasar a la ejecucion.
 ## Instrucciones de ejecucion
 Para la ejecucion del programa simplemente debemos introducir los articulos que queremos procesar en la carpeta de entrada, tambien tenemos que [activar el servidor de grobid](https://grobid.readthedocs.io/en/latest/Grobid-service/), y por ultimo activar el entorno virtual si no lo tenemos activado ya. Una vez hecho todo lo anterior corremos el script principal mediante el comando:
-````bash
+````
 python3 main.py
 ````
-Que se ocupara de correr todos los otros scripts.
+Que se ocupara de correr todos los otros scripts. Despues de esto podremos consultar los resultados de la ejecucion en el subdirectorio de salida correspondiente.
 ### Posibles errores durante la ejecucion
-Este es un posible error que puede salir durante la ejecucion del programa
+Este es un posible error que puede salir durante la ejecucion del programa:
 ````
 Warning: Ignoring XDG_SESSION_TYPE=wayland on Gnome. Use QT_QPA_PLATFORM=wayland to run on Wayland anyway.
 qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
@@ -58,7 +64,7 @@ Available platform plugins are: eglfs, linuxfb, minimal, minimalegl, offscreen, 
 Aborted (core dumped)
 ````
 Una posible solucion para este problema es instalar el siguiente plugin en Ubuntu:
-````bash
+````
 sudo apt install qtwayland5
 ````
 ## Ejemplos de ejecucion

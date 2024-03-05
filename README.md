@@ -12,6 +12,7 @@ Para poder utilizar las herramientas proporcionadas en este repositorio se neces
 
 Para el uso de estas herramientas se recomienda el uso de Ubuntu Linux por su facilida para la instalacion y puesta en marcha de todos los recursos proporcionados.
 ## Instrucciones de instalacion
+### Instalacion mediante GitHub
 Para utilizar los recursos proporcionados en este repositorio se debe descargar el .zip con todo el contenido o realizar un ````git clone```` de este repositorio. 
 
 ````
@@ -19,6 +20,13 @@ git clone https://github.com/fdzdani/Extraccion-de-Texto.git
 ````
 
 Una vez obtengas el repositorio en tu maquina, solo debes crear un entorno virtual con los modulos necesarios para correr los scripts. Para esto tenemos dos opciones utilizar venv o conda.
+### Instalacion mediante Docker
+Se provee de una imagen de Docker ya instalada. Para ejecutar los recursos mediante Docker, podras usar el Dockerfile que se proporciona en este repositorio:
+
+```
+docker build -t analizador .
+```
+## Preparacion del entorno
 ### Entorno virtual con Venv
 Para utilizar venv para crear el entorno virtual primero debemos descargar esta herramienta con:
 ```` 
@@ -47,7 +55,12 @@ conda activate nombre_entorno
 ````
 Una vez instalado todo podemos hacer en ambos casos un ````pip freeze```` para comprobar que todo se ha instalado correctamente, y pasar a la ejecucion.
 ## Instrucciones de ejecucion
-Para la ejecucion del programa simplemente debemos introducir los articulos que queremos procesar en la carpeta de entrada, tambien tenemos que [activar el servidor de grobid](https://grobid.readthedocs.io/en/latest/Grobid-service/), y por ultimo activar el entorno virtual si no lo tenemos activado ya. Una vez hecho todo lo anterior corremos el script principal mediante el comando:
+Para la ejecucion del programa simplemente debemos introducir los articulos que queremos procesar en la carpeta de entrada, tambien tenemos que [activar el servidor de grobid](https://grobid.readthedocs.io/en/latest/Grobid-service/), y por ultimo activar el entorno virtual si no lo tenemos activado ya. 
+Tras esto y si no lo hemos hecho nos movemos a la carpeta principal del proyecto haciendo un:
+```
+cd Extraccion-de-Texto
+````
+Una vez hecho todo lo anterior corremos el script principal mediante el comando:
 ````
 python3 main.py
 ````

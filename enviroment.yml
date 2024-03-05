@@ -1,4 +1,4 @@
-name: entorno
+name: analizador
 dependencies:
   - python=3.10.12
   - pip:

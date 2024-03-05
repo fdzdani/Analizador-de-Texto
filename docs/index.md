@@ -12,8 +12,8 @@ Para poder utilizar las herramientas proporcionadas en este repositorio se neces
 
 Para el uso de estas herramientas se recomienda el uso de Ubuntu Linux por su facilida para la instalacion y puesta en marcha de todos los recursos proporcionados
 ## Contenido
-- [Instalacion]()
-- [Uso]()
+- [Instalacion](https://github.com/fdzdani/Extraccion-de-Texto/blob/Develop/docs/installation.md)
+- [Uso](https://github.com/fdzdani/Extraccion-de-Texto/blob/Develop/docs/usage.md)
 - [Scripts]()
 - [Salida]()
 ## Licencia y contacto

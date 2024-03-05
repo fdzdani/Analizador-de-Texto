@@ -3,8 +3,8 @@ import os
 import xml.etree.cElementTree as ET
 import textwrap
 
-xmlfiles = "./Output/"
-output = "./Wordclouds/"
+xmlfiles = "./SalidaGrobid/"
+output = "./Salida/"
 figuras = {}
 
 for xml in os.listdir(xmlfiles):

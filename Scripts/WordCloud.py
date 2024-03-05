@@ -3,8 +3,9 @@ import matplotlib.pyplot as plt
 import os
 import xml.etree.cElementTree as ET
 
-xmlfiles = "./Output/"
-output = "./Wordclouds/"
+xmlfiles = "./SalidaGrobid/"
+output = "./Salida/"
+
 for xml in os.listdir(xmlfiles):
     path = os.path.join(xmlfiles, xml)
     if os.path.isfile(path):

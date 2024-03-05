@@ -14,8 +14,7 @@ Para el uso de estas herramientas se recomienda el uso de Ubuntu Linux por su fa
 ## Contenido
 - [Instalacion](https://github.com/fdzdani/Extraccion-de-Texto/blob/Develop/docs/installation.md)
 - [Uso](https://github.com/fdzdani/Extraccion-de-Texto/blob/Develop/docs/usage.md)
-- [Scripts]()
-- [Salida]()
+- [Scripts](https://github.com/fdzdani/Extraccion-de-Texto/blob/Develop/docs/scripts.md)
 ## Licencia y contacto
 Distribuido bajo MIT License. Ver LICENSE.txt para mas informacion.
 

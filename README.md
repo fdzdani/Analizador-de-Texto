@@ -1,4 +1,4 @@
-# Analisis de articulos
+# Analisis de Texto
 ## Descripcion  
 Este proyecto hace uso de la herramienta grobid para procesar los distintos articulos que se le proporcione mediante un script escrito en Python que hace de pipeline entre nuestro sistema y el servidor de grobid, una vez generados los documentos XML, existen otros 3 scripts para poder generar una nube de palabras o wordcloud mediante la informacion abstracta del XML, mostrar el numero de figuras en cada uno de los articulos procesados, y crear una lista de todos los links encontrados en cada articulo.
 ## Requisitos
@@ -16,7 +16,7 @@ Para el uso de estas herramientas se recomienda el uso de Ubuntu Linux por su fa
 Para utilizar los recursos proporcionados en este repositorio se debe descargar el .zip con todo el contenido o realizar un ````git clone```` de este repositorio. 
 
 ````
-git clone https://github.com/fdzdani/Extraccion-de-Texto.git
+git clone https://github.com/fdzdani/Analizador-de-Texto.git
 ````
 
 Una vez obtengas el repositorio en tu maquina, solo debes crear un entorno virtual con los modulos necesarios para correr los scripts. Para esto tenemos dos opciones utilizar venv o conda.
@@ -40,12 +40,12 @@ y activarlo:
 ````
 source nombre_entorno/bin/activate
 ````
-Una vez tengamos el entorno activado debemos descargar los modulos necesarios para correr nuestro programa, para ello utilizaremos el archivo [modulos.txt](https://github.com/fdzdani/Extraccion-de-Texto/blob/Develop/modulos.txt) proporcionado en el repositorio para descargar todas las librerias necesarias utilizando:
+Una vez tengamos el entorno activado debemos descargar los modulos necesarios para correr nuestro programa, para ello utilizaremos el archivo [modulos.txt](https://github.com/fdzdani/Analizador-de-Texto/blob/main/modulos.txt) proporcionado en el repositorio para descargar todas las librerias necesarias utilizando:
 ````
 pip install -r modulos.txt
 ````
 ### Entorno virtual con Conda
-Para utilizar conda para crear el entorno virtual primero debemos [descargar anaconda](https://www.hostinger.es/tutoriales/instalar-anaconda-python-en-ubuntu). Una vez descargado debemos crearemos el entorno con todas las librerias necesarias a partir del archivo [enviroment.yml](https://github.com/fdzdani/Extraccion-de-Texto/blob/Develop/enviroment.yml) con:
+Para utilizar conda para crear el entorno virtual primero debemos [descargar anaconda](https://www.hostinger.es/tutoriales/instalar-anaconda-python-en-ubuntu). Una vez descargado debemos crearemos el entorno con todas las librerias necesarias a partir del archivo [enviroment.yml](https://github.com/fdzdani/Analizador-de-Texto/blob/main/enviroment.yml) con:
 ```` 
 conda env create -f environment.yml
 ````
@@ -58,7 +58,7 @@ Una vez instalado todo podemos hacer en ambos casos un ````pip freeze```` para c
 Para la ejecucion del programa simplemente debemos introducir los articulos que queremos procesar en la carpeta de entrada, tambien tenemos que [activar el servidor de grobid](https://grobid.readthedocs.io/en/latest/Grobid-service/), y por ultimo activar el entorno virtual si no lo tenemos activado ya. 
 Tras esto y si no lo hemos hecho nos movemos a la carpeta principal del proyecto haciendo un:
 ```
-cd Extraccion-de-Texto
+cd Analizador-de-Texto
 ````
 Una vez hecho todo lo anterior corremos el script principal mediante el comando:
 ````
@@ -83,32 +83,32 @@ sudo apt install qtwayland5
 ## Ejemplos de ejecucion
 Primero ponemos el servidor de grobid en marcha:
 
-![image](https://github.com/fdzdani/Extraccion-de-Texto/assets/115399394/8835f016-72dd-4062-bc50-53d95cd04546)
+![image](https://github.com/fdzdani/Analizador-de-Texto/assets/115399394/8835f016-72dd-4062-bc50-53d95cd04546)
 
 Tras esto activamos el entorno para empezar a trabajar:
 
-![image](https://github.com/fdzdani/Extraccion-de-Texto/assets/115399394/9476f9d0-6943-4459-a608-be837c30f43c)
+![image](https://github.com/fdzdani/Analizador-de-Texto/assets/115399394/9476f9d0-6943-4459-a608-be837c30f43c)
 
 A continuacion llamamos al script principal, el cual sirve de pipeline con grobid y llama a los demas scripts, y nos indica si esta funcionando el servidor de grobid:
 
-![image](https://github.com/fdzdani/Extraccion-de-Texto/assets/115399394/16cc959a-27dd-47cf-9513-3f26ac36895b)
+![image](https://github.com/fdzdani/Analizador-de-Texto/assets/115399394/16cc959a-27dd-47cf-9513-3f26ac36895b)
 
 Nos encontraremos con los siguientes documentos generados en el subdirectorio correspondiente:
 
-![image](https://github.com/fdzdani/Extraccion-de-Texto/assets/115399394/3fa70aa4-30e6-4ff0-835b-363fe2c87fb9)
+![image](https://github.com/fdzdani/Analizador-de-Texto/assets/115399394/3fa70aa4-30e6-4ff0-835b-363fe2c87fb9)
 
 ### Resultados de ejecucion
 WordCloud:
 
-![image](https://github.com/fdzdani/Extraccion-de-Texto/assets/115399394/24fc0404-a6f3-4ca2-981d-c7852b1f5196)
+![image](https://github.com/fdzdani/Analizador-de-Texto/assets/115399394/24fc0404-a6f3-4ca2-981d-c7852b1f5196)
 
 ShowFigures:
 
-![image](https://github.com/fdzdani/Extraccion-de-Texto/assets/115399394/df2e2198-8a44-4c91-92c7-4aeedd67de3c)
+![image](https://github.com/fdzdani/Analizador-de-Texto/assets/115399394/df2e2198-8a44-4c91-92c7-4aeedd67de3c)
 
 ListLinks:
 
-![image](https://github.com/fdzdani/Extraccion-de-Texto/assets/115399394/4cda5699-32ef-48da-a066-5cdbf3a8e956)
+![image](https://github.com/fdzdani/Analizador-de-Texto/assets/115399394/4cda5699-32ef-48da-a066-5cdbf3a8e956)
 
 ## Como citar
 Si se quiere citar este repositorio, puedes hacerlo por ejemplo con BibTeX:
@@ -117,15 +117,15 @@ Si se quiere citar este repositorio, puedes hacerlo por ejemplo con BibTeX:
 @misc{
     author = {Daniel Fernandez Gomez},
     year = {2024},
-    title = {Extractor_de_Texto},
+    title = {Analizador-de-Texto},
     publisher = {GitHub},
-    url = {https://github.com/fdzdani/Extraccion-de-Texto}
+    url = {https://github.com/fdzdani/Analizador-de-Texto}
 }
 ```
 ## Donde buscar ayuda
 Para cualquier problema con la descarga, instalacion o puesta en marcha de grobid, acudir a la pagina principal de [documentacion de grobid](https://grobid.readthedocs.io/en/latest/Introduction/) o a su [repositorio de GitHub](https://github.com/kermitt2/grobid). Para cualquier problema con el cliente de python de grobid acudir a su [repositorio de GitHub](https://github.com/kermitt2/grobid_client_python).
 
 ## Licencia
-Distribuido bajo [MIT License](https://opensource.org/license/mit). Ver [LICENSE](https://github.com/fdzdani/Extraccion-de-Texto/blob/main/LICENSE) para mas informacion.
+Distribuido bajo [MIT License](https://opensource.org/license/mit). Ver [LICENSE](https://github.com/fdzdani/Analizador-de-Texto/blob/main/LICENSE) para mas informacion.
 
 Autor principal y contacto: Daniel Fernandez Gomez (d.fgomez@alumnos.upm.es)

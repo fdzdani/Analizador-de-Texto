@@ -18,7 +18,8 @@ Creamos una nube de palabras para visualizaar la informacion abstracta del docum
 
 ### Verificación de los datos de entrada: 
 ```python
-xmlfiles = "./resources/test_out/"
+xmlfiles = "./SalidaGrobid/"
+output = "./Salida/"
 
 for xml in os.listdir(xmlfiles):
     path = os.path.join(xmlfiles, xml)
@@ -36,8 +37,7 @@ with open(path, 'r') as file:
         for abstract in abstracts:
             div = abstract.find('tei:div', namespaces)
             p = div.find('tei:p', namespaces)
-            if isinstance(p.text, str):
-                abstract_info = p.text
+            abstract_info = p.text
 ```
 Para obtener los datos abstractos necesarios para generar la nube de palabras, para ello hemos usados las funciones find de ET para encontrar las etiquetas que buscamos y para navegar dentro de esas etiquetas. Una vez obtenidos los datos que buscamos comprobamos que estos sean en formato de texto para poder crear el wordcloud
 
@@ -45,14 +45,17 @@ Para obtener los datos abstractos necesarios para generar la nube de palabras, p
 ````python
 wordcloud = WordCloud(width = 800, height = 800, background_color = 'white', 
                       stopwords = None, min_font_size = 10).generate(abstract_info)
+        archivo = os.path.splitext(xml)[0].replace(".tei","")
+        archivo_pdf = archivo + ".wordcloud.pdf"
+        path_pdf = os.path.join(output, archivo_pdf)
         plt.figure(figsize = (8, 8), facecolor = None)
         plt.imshow(wordcloud)
         plt.axis("off")
         plt.tight_layout(pad = 0)
-    
-        plt.title(xml)
 
-        plt.show()
+        plt.title(xml)
+        plt.savefig(path_pdf, format='pdf')
+        plt.close()
 ````
 Para el procesado de los datos abstractos obtenidos utilizaremos wordcloud para generar la nube de palabras y plt para mostrar los resultados de wordcloud
 
@@ -76,7 +79,8 @@ Creamos una visualizacion que nos muestre el numero de figuras contenido en cada
 
 ### Verificación de los datos de entrada: 
 ```python
-xmlfiles = "./resources/test_out/"
+xmlfiles = "./SalidaGrobid/"
+output = "./Salida/"
 figuras = {}
 
 for xml in os.listdir(xmlfiles):
@@ -92,16 +96,23 @@ with open(path, 'r') as file:
         root = ET.fromstring(xml_data)
         namespaces = {'tei':'http://www.tei-c.org/ns/1.0'}
         figura = root.findall('.//tei:figure', namespaces)
+        xml = os.path.splitext(xml)[0].replace(".tei","").replace(".grobid", "")
         figuras[xml] = len(figura)
 ```
 Para obtener el numero de figuras vamos obtenerlo buscando la etiqueta figure en el XML, para ello hemos usados las funciones find de ET para encontrar la etiqueta y luego contar el numero de objetos contenidos en la lista. Una vez obtenidos los datos los añadimos a nuestro diccionario
 
 ### Procesado de los datos:
 ````python
-plt.bar(range(len(figuras)), list(figuras.values()), align='center')
-plt.xticks(range(len(figuras)), list(figuras.keys()), rotation=90)
+archivo_pdf = "Figuras.pdf"
+path_pdf = os.path.join(output, archivo_pdf) 
 
-plt.show()
+wrapped_labels = ['\n'.join(textwrap.wrap(label,20)) for label in figuras.keys()]        
+plt.bar(range(len(figuras)), list(figuras.values()), align='center')
+plt.xticks(range(len(figuras)), wrapped_labels, rotation=90)
+plt.tight_layout()
+
+plt.savefig(path_pdf, bbox_inches='tight', format='pdf')
+plt.close()
 ````
 Para el procesado de los datos vamos a crear un diagrama de barras para mostrar el numero de figuras por cada articulo
 
@@ -123,7 +134,8 @@ Creamos una lista de links encontrados en cada articulo procesado
 
 ### Verificación de los datos de entrada: 
 ```python
-xmlfiles = "./resources/test_out/"
+xmlfiles = "./SalidaGrobid/"
+output = "./Salida/"
 links = {}
 
 for xml in os.listdir(xmlfiles):
@@ -134,10 +146,7 @@ Para verificar los datos de entrada que hemos obtenido del directorio salida, es
 
 ### Obtencion de los datos:
 ```python
-for xml in os.listdir(xmlfiles):
-    path = os.path.join(xmlfiles, xml)
-    if os.path.isfile(path):
-        with open(path, 'r') as file:
+with open(path, 'r') as file:
             xml_data = file.read()
         root = ET.fromstring(xml_data)
         namespaces = {'tei':'http://www.tei-c.org/ns/1.0'}
@@ -153,8 +162,9 @@ Para obtener los links de cada articulo vamos a buscar la etiqueta ptr dentro de
 
 ### Procesado de los datos:
 ````python
-for articulo, urls in links.items():
-    print(f'Articulo: {articulo} , Links: {urls}')
+with open(os.path.join(output, "Links.txt"),"w") as f:
+	for articulo, urls in links.items():
+		f.write(f'Articulo: {articulo} \nLinks: {urls}\n')
 ````
 Para el procesado de los datos vamos a mostrar por pantalla cada articulo con su nombre y cada lista de links encontrados
 

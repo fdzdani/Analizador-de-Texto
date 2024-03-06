@@ -1,9 +1,9 @@
-# Uso(en revision)
+# Uso
 ## Instrucciones de ejecucion
 Para la ejecucion del programa simplemente debemos introducir los articulos que queremos procesar en la carpeta de entrada, tambien tenemos que [activar el servidor de grobid](https://grobid.readthedocs.io/en/latest/Grobid-service/), y por ultimo activar el entorno virtual si no lo tenemos activado ya. 
 Tras esto y si no lo hemos hecho nos movemos a la carpeta principal del proyecto haciendo un:
 
-```
+````
 cd Analizador-de-Texto
 ````
 

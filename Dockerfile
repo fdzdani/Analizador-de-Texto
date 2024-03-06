@@ -1,7 +1,7 @@
 from python:3.10.12
 
-RUN git clone https://github.com/fdzdani/Extraccion-de-Texto.git
+RUN git clone https://github.com/fdzdani/Analizador-de-Texto.git
 
-RUN pip install -r Extraccion-de-Texto/modulos.txt
+RUN pip install -r Analizador-de-Texto/modulos.txt
 
 

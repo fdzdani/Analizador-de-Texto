@@ -3,12 +3,11 @@ import xml.etree.ElementTree as ET
 
 xmlfiles = "./SalidaGrobid/"
 output = "./Salida/"
-
 links = {}
 
 for xml in os.listdir(xmlfiles):
     path = os.path.join(xmlfiles, xml)
-    if os.path.isfile(path):
+    if os.path.isfile(path) and path.endswith(".xml"):
         with open(path, 'r') as file:
             xml_data = file.read()
         root = ET.fromstring(xml_data)

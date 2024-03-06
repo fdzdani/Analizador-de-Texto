@@ -1,5 +1,6 @@
 # Analisis de articulos
 [![Documentation Status](https://readthedocs.org/projects/analizador-de-texto/badge/?version=latest)](https://analizador-de-texto.readthedocs.io/es/latest/?badge=latest)
+[![DOI](https://zenodo.org/badge/756785125.svg)](https://zenodo.org/doi/10.5281/zenodo.10786928)
 ## Descripcion  
 Este proyecto hace uso de la herramienta grobid para procesar los distintos articulos que se le proporcione mediante un script escrito en Python que hace de pipeline entre nuestro sistema y el servidor de grobid, una vez generados los documentos XML, existen otros 3 scripts para poder generar una nube de palabras o wordcloud mediante la informacion abstracta del XML, mostrar el numero de figuras en cada uno de los articulos procesados, y crear una lista de todos los links encontrados en cada articulo.
 ## Requisitos

@@ -12,10 +12,10 @@ Para poder utilizar las herramientas proporcionadas en este repositorio se neces
 
 Para el uso de estas herramientas se recomienda el uso de Ubuntu Linux por su facilida para la instalacion y puesta en marcha de todos los recursos proporcionados.
 ## Contenido
-- [Instalacion](https://extraccion-de-texto.readthedocs.io/es/latest/installation/)
-- [Uso](https://extraccion-de-texto.readthedocs.io/es/latest/usage/)
-- [Scripts](https://extraccion-de-texto.readthedocs.io/es/latest/scripts/)
+- [Instalacion](https://analizador-de-texto.readthedocs.io/es/latest/installation/)
+- [Uso](https://analizador-de-texto.readthedocs.io/es/latest/usage/)
+- [Scripts](https://analizador-de-texto.readthedocs.io/es/latest/scripts/)
 ## Licencia y contacto
-Distribuido bajo [MIT License](https://opensource.org/license/mit). Ver [LICENSE](https://github.com/fdzdani/Extraccion-de-Texto/blob/main/LICENSE) para mas informacion.
+Distribuido bajo [MIT License](https://opensource.org/license/mit). Ver [LICENSE](https://github.com/fdzdani/Analizador-de-Texto/blob/main/LICENSE) para mas informacion.
 
 Autor y contacto: Daniel Fernandez Gomez (d.fgomez@alumnos.upm.es)
